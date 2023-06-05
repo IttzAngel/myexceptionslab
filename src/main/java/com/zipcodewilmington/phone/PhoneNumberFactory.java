@@ -20,7 +20,7 @@ public final class PhoneNumberFactory {
      * @param phoneNumberCount - number of PhoneNumber objects to instantiate
      * @return array of randomly generated PhoneNumber objects
      */ //TODO - Implement logic
-    public static PhoneNumber[] createRandomPhoneNumberArray(int phoneNumberCount) throws InvalidPhoneNumberFormatException {
+    public static PhoneNumber[] createRandomPhoneNumberArray(int phoneNumberCount) {
         PhoneNumber[] phonenumber = new PhoneNumber[phoneNumberCount];
         for (int i = 0; i < phonenumber.length; i++) {
             phonenumber[i] = createRandomPhoneNumber();
@@ -31,7 +31,7 @@ public final class PhoneNumberFactory {
     /**
      * @return an instance of PhoneNumber with randomly generated phone number value
      */ //TODO - Implement logic
-    public static PhoneNumber createRandomPhoneNumber() throws InvalidPhoneNumberFormatException {
+    public static PhoneNumber createRandomPhoneNumber() {
 
         int areaCode = RandomNumberFactory.createInteger(100, 1000);
         int centralOfficeCode = RandomNumberFactory.createInteger(100, 1000);
@@ -48,7 +48,7 @@ public final class PhoneNumberFactory {
      * @param phoneLineCode     - 4 digit code
      * @return a new phone number object
      */ //TODO - if input is valid, return respective PhoneNumber object, else return null
-    public static PhoneNumber createPhoneNumberSafely(int areaCode, int centralOfficeCode, int phoneLineCode) throws InvalidPhoneNumberFormatException{
+    public static PhoneNumber createPhoneNumberSafely(int areaCode, int centralOfficeCode, int phoneLineCode) {
         String num = "";
 
         if (String.valueOf(areaCode).length() == 3 && String.valueOf(centralOfficeCode).length() == 3 && String.valueOf(phoneLineCode).length() == 4){
