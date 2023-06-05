@@ -56,7 +56,7 @@ public final class PhoneNumberFactory {
         }
         try {
             return createPhoneNumber(num);
-        } catch (InvalidPhoneNumberFormatException e) {
+        } catch (InvalidPhoneNumberFormatException ipnfe) {
             logger.warning(areaCode + "-" + centralOfficeCode  + "-" + phoneLineCode   + "" + " is not a valid phone number");
             return null;
         }
